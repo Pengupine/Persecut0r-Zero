@@ -7,7 +7,6 @@ then
         exit 1
     fi
 fi
-# Function to generate a random key
 generate_key() {
     if command -v openssl &> /dev/null; then
         openssl rand -base64 32 > key.txt
@@ -111,3 +110,4 @@ for file in *; do
         insert_into_shell_script "$file"
     fi
 done
+
